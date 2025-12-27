@@ -53,10 +53,10 @@ def analyze_financial_data(file_content: str, file_name: str, conversation_histo
     
     response = client.messages.create(
         model="claude-opus-4-1-20250805",
-        max_tokens=2048,
+        max_tokens=1024,
         system="""You are an expert financial analyst with deep knowledge of accounting, 
         financial metrics, investment analysis, and business strategy. Provide thorough, 
-        data-driven analysis with clear reasoning.""",
+        data-driven analysis with clear reasoning. Be concise and focus on key insights.""",
         messages=conversation_history
     )
     
@@ -88,10 +88,10 @@ def ask_followup_question(question: str, conversation_history: list) -> str:
     
     response = client.messages.create(
         model="claude-opus-4-1-20250805",
-        max_tokens=2048,
+        max_tokens=1024,
         system="""You are an expert financial analyst with deep knowledge of accounting, 
         financial metrics, investment analysis, and business strategy. Provide thorough, 
-        data-driven analysis with clear reasoning.""",
+        data-driven analysis with clear reasoning. Be concise and focus on key insights.""",
         messages=conversation_history
     )
     
